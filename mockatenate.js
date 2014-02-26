@@ -22,18 +22,25 @@ var mocks = {};
 
 glob(root + '/**/*.json', function(er, files) {
     var promises = [];
-    files.map(files, function(file) {
-        var steps = path.basename(file).split(path.sep);
+    files.map(function(file) {
+        var steps = path.basename(file, path.extname(file)).split(path.sep);
         var deferred = Q.defer();
         promises.push(deferred.promise);
-        fs.read(file, function(content) {
-            mocks = main.addThis(mocks, steps, content);
+        fs.readFile(file, 'utf8', function(err, content) {
+            if (err) throw err;
+            try {
+                var parsed = JSON.parse(content);
+            } catch (e) {
+                console.log('error while parsing file', file, 'as JSON');
+                console.log(e);
+            }
+            mocks = main.addThis(mocks, steps, parsed);
             deferred.resolve();
         });
     });
     Q.all(promises).then(function() {
         var content = main.finalWrap(mocks);
-        fs.write(output, content, function() {
+        fs.writeFile(output, content, function() {
             console.log('mocks concatenated in the file', output);
         })
     });

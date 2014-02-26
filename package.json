@@ -1,6 +1,6 @@
 {
   "name": "mockatenate",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "concatenator for JSON mocks",
   "keywords": "angular json test mock",
   "homepage": "http://github.com/danse/mockatenate",
@@ -9,6 +9,7 @@
     "email": "f.occhipinte@gmail.com"
   },
   "author": "Francesco Occhipinti <f.occhipinti@gmail.com>",
+  "main": "main.js",
   "bin": "mockatenate.js",
   "repository": {
     "type": "git",

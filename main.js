@@ -27,3 +27,6 @@ function addThis(obj, steps, content) {
 function finalWrap(json) {
     return 'var mocks = ' + JSON.stringify(json) + ';';
 }
+
+exports.addThis = addThis;
+exports.finalWrap = finalWrap;
