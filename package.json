@@ -1,0 +1,22 @@
+{
+  "name": "mockatenate",
+  "version": "0.0.0",
+  "description": "concatenator for JSON mocks",
+  "keywords": "angular json test mock",
+  "homepage": "http://github.com/danse/mockatenate",
+  "bugs": {
+    "url": "http://github.com/danse/mockatenate/issues",
+    "email": "f.occhipinte@gmail.com"
+  },
+  "author": "Francesco Occhipinti <f.occhipinti@gmail.com>",
+  "bin": "mockatenate.js",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/npm/npm.git"
+  },
+  "dependencies": {
+    "commander": "~2.1.0",
+    "glob": "~3.2.8",
+    "q": "~1.0.0"
+  }
+}
