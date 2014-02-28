@@ -51,11 +51,20 @@ unit tests and integration (protractor, end to end) tests.
 Furthermore, i had a lot of mocks around and that was cluttering my
 testing code.
 
-Using mockcat, you can keep your mocks clearly readable and accessible
-in their folders, then include them in your protractor and unit tests,
-and link them to API endpoints.
+Using mockcatenate, you can keep your mocks clearly readable and
+accessible in their folders, then include them in your protractor and
+unit tests, and link them to API endpoints.
 
 # How to include the generated mock
 
+At the end you will have a single `mock.js` file declaring a `mocks`
+variable. It just has to be included in your test javascript logic.
+
 - for unit tests, add it in the `karma.conf.js` file
 - for integration tests, load the file in your test `index.html`
+
+# How to install
+
+With npm:
+
+    $ npm install mockatenate
