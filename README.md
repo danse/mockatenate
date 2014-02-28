@@ -9,35 +9,35 @@ It recursively reads `json` files, concatenating them in a single mock file.
 
 For example, if you have a directory structure like the following:
 
-   mocks/
-     articles/
-       64.json
-       32.json
-     pictures/
-       list.json
-       34.json
+    mocks/
+      articles/
+        64.json
+        32.json
+      pictures/
+        list.json
+        34.json
 
 Running `mockatenate mocks/` will convert that into a single `mock.js`
 file, with the following content:
 
-  var mocks = {
-    articles: {
-      64: {
-        <content of mocks/articles/64.json>
+    var mocks = {
+      articles: {
+        64: {
+          <content of mocks/articles/64.json>
+        },
+        32: {
+          <content of mocks/articles/32.json>
+        }
       },
-      32: {
-        <content of mocks/articles/32.json>
+      pictures: {
+        list: {
+          <content of mocks/list.json>
+        },
+        34: {
+          <content of mocks/pictures/34.json>
+        }
       }
-    },
-    pictures: {
-      list: {
-        <content of mocks/list.json>
-      },
-      34: {
-        <content of mocks/pictures/34.json>
-      }
-    }
-  };
+    };
 
 I recommend having a convention for mocks listing all resources of one
 type, `list` in this case.
