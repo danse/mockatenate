@@ -1,1 +1,0 @@
-var mocks = {"23":{},"32":{"simple":"data"},"46":{},"64":{},"pictures":{"i":"feel","so":"json"}};

@@ -1,6 +1,6 @@
 {
   "name": "mockatenate",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "concatenator for JSON mocks",
   "keywords": "angular json test mock",
   "homepage": "http://github.com/danse/mockatenate",

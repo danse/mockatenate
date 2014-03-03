@@ -23,7 +23,9 @@ var mocks = {};
 glob(root + '/**/*.json', function(er, files) {
     var promises = [];
     files.map(function(file) {
-        var steps = path.basename(file, path.extname(file)).split(path.sep);
+        var steps = path.dirname(file).split(path.sep);
+        steps.shift(); // remove the root directory
+        steps.push(path.basename(file, path.extname(file)));
         var deferred = Q.defer();
         promises.push(deferred.promise);
         fs.readFile(file, 'utf8', function(err, content) {
