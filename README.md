@@ -1,3 +1,5 @@
+[![No Maintenance Intended](http://unmaintained.tech/badge.svg)](http://unmaintained.tech/)
+
 # Mock concatenate!
 
 Mockatenate is a simple utility script, that i wrote in order to make
